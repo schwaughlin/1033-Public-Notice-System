@@ -1,13 +1,4 @@
 <header class="usa-site-header" role="banner">
-  <div class="usa-grid complete-header-leo">
-    <div class="usa-width-one-whole">
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, class: "usa-button-primary header-button" %>
-      <% else %>
-        <%= link_to "Sign in", new_user_session_path, class: "usa-button-primary header-button" %>
-      <% end %>
-    </div>
-  </div>
   <div class="usa-disclaimer">
     <div class="usa-disclaimer-official">
       <%= image_tag("binoculars.ico") %>
