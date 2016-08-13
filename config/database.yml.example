@@ -1,0 +1,14 @@
+defaults: &defaults
+  adapter: postgresql
+  username: this_is_my_username
+  password: this_is_my_password
+  encoding: utf8
+  host: localhost
+
+development:
+  database: dev_database
+  <<: *defaults
+
+test: &test
+  database: test_database
+  <<: *defaults
