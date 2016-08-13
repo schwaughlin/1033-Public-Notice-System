@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'devise'
 
+#For .scss lint yml file
+gem 'scss_lint', require: false
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
