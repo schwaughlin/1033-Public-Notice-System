@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 gem 'devise'
 
+#primary icons source
+gem "font-awesome-rails"
+
 #For .scss lint yml file
 gem 'scss_lint', require: false
 
