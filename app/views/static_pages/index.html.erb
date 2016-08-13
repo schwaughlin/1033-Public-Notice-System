@@ -1,10 +1,52 @@
-<section class="usa-grid-full">
+<section class="usa-grid-full jumbotron">
+  <!-- heading -->
+  <section class="usa-width-one-whole landing-page-title">
+    <h2><%= Faker::Lorem.sentence %></h2>
+    <!-- <h2>Montana Surplus Military Equipment Transparency Project</h2> -->
+  </section>
+  <hr>
+  <!-- sub-heading -->
+  <section class="usa-width-one-whole landing-page-byline">
+    <p><i>With the passage of HB330 in the 2015 Legislative Session, Montana law enforcement is now required to
+      issue public notice within 14 days of a request for surplus military equipment, particularly the 1033 program.
+      This website is a volunteer project seeking to give citizens public access to records of surplus military equipment
+      transfers, and further to give law enforcement the tools to comply with and exceed the new transparency requirements that
+      have taken effect.
+    </i></p>
+  </section>
+
+  <!-- three little nodules selection -->
+  <hr><hr>
   <section class="usa-width-one-whole">
-    <article class="usa-width-one-half">
-      <p>Halfsies</p>
+    <article class="usa-width-one-third">
+      <div class="usa-width-one-whole landing-page-nodules">
+        <div class="usa-width-one-whole nodule-icon">
+          <i class="fa fa-file-archive-o fa-5x" aria-hidden="true"></i>
+        </div>
+        <div class="usa-width-one-whole nodule-text">
+          <%= Faker::Lorem.sentence %>
+        </div>
+      </div>
     </article>
-    <article class="usa-width-one-half">
-      <p>Other halfsies</p>
+    <article class="usa-width-one-third">
+      <div class="usa-width-one-whole landing-page-nodules">
+        <div class="usa-width-one-whole nodule-icon">
+          <i class="fa fa-search fa-5x" aria-hidden="true"></i>
+        </div>
+        <div class="usa-width-one-whole nodule-text">
+          <%= Faker::Lorem.sentence %>
+        </div>
+      </div>
+    </article>
+    <article class="usa-width-one-third">
+      <div class="usa-width-one-whole landing-page-nodules">
+        <div class="usa-width-one-whole nodule-icon">
+          <i class="fa fa-upload fa-5x" aria-hidden="true"></i>
+        </div>
+        <div class="usa-width-one-whole nodule-text">
+          <%= Faker::Lorem.sentence %>
+        </div>
+      </div>
     </article>
   </section>
 </section>

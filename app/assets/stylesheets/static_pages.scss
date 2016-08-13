@@ -53,3 +53,40 @@ $cool-blue-lightest: #dce4ef;
 
 $focus: #3e94cf;
 $visited: #4c2c92;
+
+
+body {
+  background-color: $cool-blue;
+}
+
+.jumbotron {
+  background-color: $gray-cool-light;
+  padding: 15px;
+}
+
+.landing-page-title {
+  background-color: $cool-blue-lightest;
+}
+
+.landing-page-byline {
+  background-color: $gold-lightest;
+}
+
+.nodule-icon {
+  text-align: center;
+}
+
+.nodule-text {
+  padding: 15px;
+  text-align: center;
+}
+
+.landing-page-nodules {
+  padding: 15px;
+}
+
+.landing-page-nodules:hover {
+  background-color: $secondary-light;
+  border: 2px, $secondary;
+  border-radius: 10px;
+}

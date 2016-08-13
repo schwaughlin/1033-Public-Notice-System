@@ -1,44 +1,36 @@
 <footer class="usa-footer usa-footer-slim" role="contentinfo">
-  <div class="usa-grid usa-footer-return-to-top">
-    <a href="javascript:void(0);">Return to top</a>
-  </div>
   <div class="usa-footer-primary-section">
     <div class="usa-grid-full">
       <nav class="usa-footer-nav usa-width-two-thirds">
         <ul class="usa-unstyled-list">
-          <li class="usa-width-one-fourth usa-footer-primary-content">
-            <%= link_to "Inventory Prior to HB 330", "https://www.muckrock.com/foi/montana-157/1033-mou-and-annual-inventory-form-montana-highway-patrol-12999/", class: "usa-footer-primary-link" %>
+          <li class="usa-width-one-fourth usa-footer-primary-content usa-external_link">
+            <%= link_to "House Bill 330", "http://leg.mt.gov/bills/2015/hb0399/HB0330_x.pdf", class: "usa-footer-primary-link" %>
           </li>
-          <li class="usa-width-one-fourth usa-footer-primary-content">
-            <%= link_to "Relevant Legislation", "http://leg.mt.gov/bills/2015/hb0399/HB0330_x.pdf", class: "usa-footer-primary-link" %>
+          <li class="usa-width-one-fourth usa-footer-primary-content usa-external_link">
+            <%= link_to "Inventories Prior to HB 330", "https://www.muckrock.com/foi/montana-157/1033-mou-and-annual-inventory-form-montana-highway-patrol-12999/", class: "usa-footer-primary-link" %>
           </li>
-          <li class="usa-width-one-fourth usa-footer-primary-content">
-            <%= link_to "DOJ Website on 1033 Program", "https://dojmt.gov/highwaypatrol/1033-program/", class: "usa-footer-primary-link" %>
+          <li class="usa-width-one-fourth usa-footer-primary-content usa-external_link">
+            <%= link_to "DOJ Website on the 1033 Program", "https://dojmt.gov/highwaypatrol/1033-program/", class: "usa-footer-primary-link" %>
           </li>
-          <li class="usa-width-one-fourth usa-footer-primary-content">
-            <%= link_to "State Checkbook", "https://www.porkcast.com", class: "usa-footer-primary-link" %>
+          <li class="usa-width-one-fourth usa-footer-primary-content usa-external_link">
+            <%= link_to "State Checkbook", "http://www.porkcast.com", class: "usa-footer-primary-link" %>
           </li>
-          <!-- <li class="usa-width-one-fifth usa-footer-primary-content">
-            <%= link_to "Source Code", "https://github.com/schwaughlin/1033-Public-Notice-System", class: "usa-footer-primary-link" %>
-          </li> -->
         </ul>
       </nav>
       <div class="usa-width-one-third">
         <div class="usa-footer-primary-content usa-footer-contact_info">
-          <!-- <a href="mailto:nicholas.schwaderer@gmail.com">nicholas.schwaderer@gmail.com</a> -->
-          <%= content_tag(:p, fa_icon("envelope-o", text: "nicholas.schwaderer@gmail.com")) %>
+          <div class="usa-grid">
+            <div class="usa-width-one-fourth">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </div>
+            <div class="usa-width-three-fourths">
+              <a href="mailto:nicholas.schwaderer@gmail.com">nicholas.schwaderer@gmail.com</a>
+            </div>
+          </div>
         </div>
         <div class="usa-footer-primary-content usa-footer-contact_info">
         </div>
       </div>
     </div>
   </div>
-
-  <!-- <div class="usa-footer-secondary_section">
-    <div class="usa-grid">
-      <div class="usa-footer-logo">
-        <h3 class="usa-footer-slim-logo-heading">Schwaughlin Consultin</h3>
-      </div>
-    </div>
-  </div> -->
 </footer>
