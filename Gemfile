@@ -4,7 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -26,6 +27,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'faker'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -33,6 +36,35 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'better_errors'
+  gem 'bullet' #License: MIT
+  gem 'rack-mini-profiler', require: false
+  gem 'pronto'
+  gem 'pronto-rubocop', require: false
+  gem 'pronto-flay', require: false
+  gem 'pronto-brakeman', require: false
+  gem 'fasterer'
+  gem 'guard-rspec', require: false
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
+  gem 'pry-byebug'
+  gem 'rails-pry'
+  gem 'capybara' #License: MIT
+  gem 'capybara-screenshot' #License: MIT
+  gem 'database_cleaner' #License: MIT
+  gem 'launchy', '>= 2.4', '>= 2.4.3'
+  gem 'email_spec' #License: MIT
+  gem 'rspec-retry' #License: MIT
+  gem 'selenium-webdriver' #License: Apache
+  gem 'simplecov', require: false #License: MIT
+  # gem 'shoulda-matchers' #License: MIT
+  gem 'shoulda', '~> 3.5'
+  gem 'brakeman' #License: MIT
+  gem 'rubocop' #License: MIT
+  gem 'rails-controller-testing' #License: MIT
 end
 
 group :development do
