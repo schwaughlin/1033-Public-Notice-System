@@ -1,4 +1,13 @@
 <header class="usa-site-header" role="banner">
+  <div class="usa-grid complete-header-leo">
+    <div class="usa-width-one-whole">
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, class: "usa-button-primary header-button" %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "usa-button-primary header-button" %>
+      <% end %>
+    </div>
+  </div>
   <div class="usa-disclaimer">
     <div class="usa-disclaimer-official">
       <%= image_tag("binoculars.ico") %>
@@ -9,33 +18,4 @@
       <a href="https://github.com/schwaughlin/1033-Public-Notice-System/">Learn more.</a>
     </p>
   </div>
-  <div class="site-navbar">
-    <a class="menu-btn" href="javascript:void(0);">Menu</a>
-    <div class="site-logo" id="logo">
-      <em>
-        <%= link_to "this is another test link", "#" %>
-        <!-- <a href="{{ site.baseurl }}/" accesskey="1" title="Home" aria-label="Home">
-        Draft U.S. Web Design Standards</a> -->
-      </em>
-    </div>
-  </div>
-  <nav class="site-nav-secondary js-sticky-nav">
-    <ul>
-      <li>
-        <a href="#", class="usa-current">This is a test li</a>
-      </li>
-      <!-- <li>
-        <a {% if page.category == 'UI components' or page.title == 'UI components' %}class="usa-current"{% endif %} href="/">UI COMPONENTS</a>
-      </li>
-      <li>
-        <a {% if page.category == 'Getting started' or page.title == 'Getting started' %}class="usa-current"{% endif %} href="/getting-started/">GETTING STARTED</a>
-      </li>
-      <li>
-        <a {% if page.title == 'Design principles' %}class="usa-current"{% endif %} href="/design-principles/">DESIGN PRINCIPLES</a>
-      </li>
-      <li>
-        <a {% if page.category == 'About our work' or page.title == 'About our work' %}class="usa-current"{% endif %} href="/about-our-work/">ABOUT OUR WORK</a>
-      </li> -->
-    </ul>
-  </nav>
 </header>
