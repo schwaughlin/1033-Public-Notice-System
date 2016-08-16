@@ -1,7 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Code Climate](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System.svg)](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System)
+[![Build Status](https://secure.travis-ci.org/mmozuras/pronto.svg)](http://travis-ci.org/mmozuras/pronto)
+[![Inline docs](http://inch-ci.org/github/mmozuras/pronto.svg)](http://inch-ci.org/github/mmozuras/pronto)
 
 Things you may want to cover:
 
@@ -11,18 +12,14 @@ Things you may want to cover:
 
 * System dependencies
 
-* Configuration
+* Testing
+  - RSpec
+  - FactoryGirl
+  - capybara
+  - Simple Cov
 
-* Database creation
+* CI
+  - CodeClimate
 
 * Database initialization
   - Postgres
-
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
