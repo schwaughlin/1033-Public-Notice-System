@@ -1,7 +1,6 @@
-require 'capybara/rails'
-require 'capybara/rspec'
-require 'coveralls'
-Coveralls.wear!
+
+require 'simplecov'
+
 
 SimpleCov.start do
   add_filter '/test/'
@@ -33,6 +32,17 @@ SimpleCov.coverage_dir 'public/coverage'
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
+ENV["RAILS_ENV"] ||= 'test'
+require 'spec_helper'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'capybara/rspec'
+require 'email_spec'
+require 'rspec/retry'
+require 'capybara-screenshot/rspec'
+require 'coveralls'
+Coveralls.wear!
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

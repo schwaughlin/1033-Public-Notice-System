@@ -1,0 +1,20 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Volumes/OCEANSHQ 2/1033-program/equipment-request-logger/app/models/user.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Volumes/OCEANSHQ 2/1033-program/equipment-request-logger/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1471372737
+  }
+}

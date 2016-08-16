@@ -44,7 +44,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'better_errors'
   gem 'bullet' #License: MIT
-  gem 'rack-mini-profiler', require: false
   gem 'pronto'
   gem 'pronto-rubocop', require: false
   gem 'pronto-flay', require: false
