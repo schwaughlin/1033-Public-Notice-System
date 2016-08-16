@@ -1,5 +1,7 @@
 require 'capybara/rails'
 require 'capybara/rspec'
+require 'coveralls'
+Coveralls.wear!
 
 SimpleCov.start do
   add_filter '/test/'

@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System.svg)](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System)
 [![Build Status](https://secure.travis-ci.org/mmozuras/pronto.svg)](http://travis-ci.org/mmozuras/pronto)
-[![Inline docs](http://inch-ci.org/github/mmozuras/pronto.svg)](http://inch-ci.org/github/mmozuras/pronto)
+[![Coverage Status](https://coveralls.io/repos/guard/guard-rspec/badge.png?branch=master)](https://coveralls.io/r/guard/guard-rspec)
 
 Things you may want to cover:
 
