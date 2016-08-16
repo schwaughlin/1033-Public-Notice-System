@@ -55,7 +55,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.5'
   gem 'pry-byebug'
   gem 'rails-pry'
   gem 'capybara' #License: MIT

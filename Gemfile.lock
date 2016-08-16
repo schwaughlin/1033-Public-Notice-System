@@ -380,7 +380,7 @@ DEPENDENCIES
   rails (~> 5.0.0)
   rails-controller-testing
   rails-pry
-  rspec-rails
+  rspec-rails (~> 3.5)
   rspec-retry
   rubocop
   sass-rails (~> 5.0)

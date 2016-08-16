@@ -1456,7 +1456,7 @@ input[type="radio"] + label::before {
   line-height: 1.8rem;
   margin-right: 0.6em;
   text-indent: 0.15em;
-  vertical-align: middle\0;
+  vertical-align: middle;
   width: 1.8rem;
 }
 
