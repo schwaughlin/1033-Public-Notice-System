@@ -1,8 +1,8 @@
 # README
 
-[![Code Climate](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System.svg)](https://codeclimate.com/github/schwaughlin/1033-Public-Notice-System)
-[![Build Status](https://secure.travis-ci.org/mmozuras/pronto.svg)](http://travis-ci.org/mmozuras/pronto)
-[![Coverage Status](https://coveralls.io/repos/Schwad/1033-Public-Notice-System/badge.png?branch=master)](https://coveralls.io/r/guard/guard-rspec)
+[![Code Climate](https://codeclimate.com/github/Schwad/1033-Public-Notice-System.svg)](https://codeclimate.com/github/Schwad/1033-Public-Notice-System)
+[![Build Status](https://secure.travis-ci.org/Schwad/1033-Public-Notice-System.svg)](http://travis-ci.org/mmozuras/pronto)
+[![Coverage Status](https://coveralls.io/repos/Schwad/1033-Public-Notice-System/badge.png?branch=master)](https://coveralls.io/r/Schwad/1033-Public-Notice-System)
 
 Things you may want to cover:
 
