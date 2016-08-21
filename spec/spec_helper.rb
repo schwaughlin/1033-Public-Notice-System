@@ -40,8 +40,6 @@ require 'capybara/rspec'
 require 'email_spec'
 require 'rspec/retry'
 require 'capybara-screenshot/rspec'
-require 'coveralls'
-Coveralls.wear!
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
