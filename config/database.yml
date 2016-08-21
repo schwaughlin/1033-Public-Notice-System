@@ -11,4 +11,8 @@ development:
 
 test: &test
   database: erltest
-  <<: *defaults
+  adapter: postgresql
+  username: rock_and_roll
+  password: rock_and_roll
+  encoding: utf8
+  host: localhost
