@@ -3,14 +3,9 @@
 [![Code Climate](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/gpa.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/feed)
 [![Build Status](https://travis-ci.org/schwaughlin/1033-Public-Notice-System.svg?branch=master)](https://travis-ci.org/schwaughlin/1033-Public-Notice-System)
 [![Coverage Status](https://coveralls.io/repos/github/schwaughlin/1033-Public-Notice-System/badge.svg?branch=code_climate_config)](https://coveralls.io/github/schwaughlin/1033-Public-Notice-System?branch=code_climate_config)
-[![Test Coverage](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/coverage.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/coverage)
 [![Issue Count](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/issue_count.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/feed)
 
-**Coveralls has been removed for now, as it won't hook in to the Schwaughlin repo which is the primary one I want to use; Same issue for Slack's Github webhook**
-
-Config Notes:
-
--Code climate test
+**Slack Webhook for Github currently not working. Status below:**
 
 * After installation, enter the following to allow the Github Slack custom webhook to work:
 
@@ -34,13 +29,10 @@ git config hooks.slack.show-full-commit true
 
 #######################
 
-Things you may want to cover:
 
 * Ruby version
   - 2.3.1
-  - Rails 5.0.0
-
-* System dependencies
+  - Rails 5.0.0.1
 
 * Testing
   - RSpec
@@ -50,6 +42,8 @@ Things you may want to cover:
 
 * CI
   - CodeClimate
+  - Coveralls
+  - Travis CI
 
 * Database initialization
   - Postgres
