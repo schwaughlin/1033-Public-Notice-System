@@ -2,7 +2,7 @@
 
 [![Code Climate](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/gpa.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/feed)
 [![Build Status](https://travis-ci.org/schwaughlin/1033-Public-Notice-System.svg?branch=master)](https://travis-ci.org/schwaughlin/1033-Public-Notice-System)
-[![Coverage Status](https://coveralls.io/repos/github/schwaughlin/1033-Public-Notice-System/badge.svg)](https://coveralls.io/github/schwaughlin/1033-Public-Notice-System)
+[![Coverage Status](https://coveralls.io/repos/github/schwaughlin/1033-Public-Notice-System/badge.svg?branch=code_climate_config)](https://coveralls.io/github/schwaughlin/1033-Public-Notice-System?branch=code_climate_config)
 [![Test Coverage](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/coverage.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/coverage)
 [![Issue Count](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/issue_count.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/feed)
 
