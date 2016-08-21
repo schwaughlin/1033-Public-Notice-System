@@ -7,6 +7,8 @@
 
 Config Notes:
 
+-Code climate test
+
 * After installation, enter the following to allow the Github Slack custom webhook to work:
 
 [Sauce](https://github.com/chriseldredge/git-slack-hook)
