@@ -1,7 +1,7 @@
 # README
 
-[![Code Climate](https://codeclimate.com/github/Schwad/1033-Public-Notice-System.svg)](https://codeclimate.com/github/Schwad/1033-Public-Notice-System)
-[![Build Status](https://secure.travis-ci.org/Schwaughlin/1033-Public-Notice-System.svg)](http://travis-ci.org/Schwaughlin/1033-Public-Notice-System)
+[![Code Climate](https://codeclimate.com/github/Schwaughlin/1033-Public-Notice-System.svg)](https://codeclimate.com/github/Schwaughlin/1033-Public-Notice-System)
+[![Build Status](https://travis-ci.org/schwaughlin/1033-Public-Notice-System.svg?branch=master)](https://travis-ci.org/schwaughlin/1033-Public-Notice-System)
 
 **Coveralls has been removed for now, as it won't hook in to the Schwaughlin repo which is the primary one I want to use; Same issue for Slack's Github webhook**
 

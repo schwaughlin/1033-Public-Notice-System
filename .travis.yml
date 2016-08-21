@@ -25,7 +25,3 @@ script:
 
 notifications:
   slack: schwaughlin:crRxhS7awljHvIl8quLRz4FA
-
-addons:
-  code_climate:
-    repo_token: 
