@@ -9,6 +9,8 @@ Config Notes:
 
 * After installation, enter the following to allow the Github Slack custom webhook to work:
 
+[Sauce](https://github.com/chriseldredge/git-slack-hook)
+
 ```
 ###CD down to /hooks
 
