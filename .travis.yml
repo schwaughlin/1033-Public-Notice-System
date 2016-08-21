@@ -14,7 +14,7 @@ variables:
 #   - RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load db:migrate
 
 before_script:
-  - psql -c "CREATE USER skateparks WITH PASSWORD 'skateparks';" -U postgres
+  - psql -c "CREATE USER rock_and_roll WITH PASSWORD 'rock_and_roll';" -U postgres
 
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
