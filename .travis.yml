@@ -3,5 +3,20 @@ rvm:
  - 2.2
  - jruby
  - rbx-2
-# uncomment and edit the following line if your project needs to run something other than `rake`:
-script: bundle exec rspec spec
+
+variables:
+  RSPEC_RETRY_RETRY_COUNT: "7"
+
+before_script:
+  - ruby -v
+  - which ruby
+  - cp config/database.yml.example config/database.yml
+  - touch log/application.log
+  - touch log/test.log
+  - bin/rails db:environment:set RAILS_ENV=test
+  - RAILS_ENV=test bundle exec rake db:drop db:create db:schema:load db:migrate
+
+rspec:
+  stage: test
+  script:
+    - - RAILS_ENV=test bundle exec rspec
