@@ -5,27 +5,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/schwaughlin/1033-Public-Notice-System/badge.svg?branch=code_climate_config)](https://coveralls.io/github/schwaughlin/1033-Public-Notice-System?branch=code_climate_config)
 [![Issue Count](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/badges/80c3216ae04bbe12b73d/issue_count.svg)](https://codeclimate.com/repos/57b9cbe1270c315c9b003f9f/feed)
 
-**Slack Webhook for Github currently not working. Status below:**
 
-* After installation, enter the following to allow the Github Slack custom webhook to work:
+## 1033 Program Public Notice System
 
-[Sauce](https://github.com/chriseldredge/git-slack-hook)
-
-```
-###CD down to /hooks
-
-chmod +x post-receive
-
-git config hooks.slack.webhook-url 'https://hooks.slack.com/services/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'
-
-git config hooks.slack.username 'git'
-
-git config hooks.slack.icon-url 'http://ericsteinborn.com/github-for-cats/img/ironcat.png'
-
-git config hooks.slack.show-full-commit true
-
-```
-
+A tool to share publicly equipment obtained by local law enforcement via the 1033 program, and allow them to comply with Montana public reporting standards on requests. 
 
 #######################
 
