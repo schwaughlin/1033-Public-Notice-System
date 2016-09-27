@@ -32,6 +32,8 @@ gem 'devise'
 gem 'jquery-datatables-rails', '~> 3.4.0'
 #primary icons source
 gem "font-awesome-rails"
+gem 'pry-byebug'
+
 
 #For .scss lint yml file
 gem 'scss_lint', require: false
@@ -55,7 +57,6 @@ end
 group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
-  gem 'pry-byebug'
   gem 'rails-pry'
   gem 'capybara' #License: MIT
   gem 'capybara-screenshot' #License: MIT

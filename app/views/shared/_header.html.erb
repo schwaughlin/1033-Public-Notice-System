@@ -6,15 +6,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-          <%= link_to "Other Projects", "www.porkcast.com" %>
+          <%= link_to "Other Projects", "http://www.porkcast.com" %>
         </li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
+        <% if user_signed_in? %>
             <p class="navbar-text"><%= current_user.email %></p>
           <li>
-            <%= link_to "Sign Out", destroy_user_session_path %>
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
           </li>
         <% else %>
           <li>

@@ -11,8 +11,12 @@
 
   <body>
     <%= render 'shared/header' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><%= alert %></div>
+    <% end %>
       <%= yield %>
     <%= render 'shared/footer' %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
