@@ -4,9 +4,7 @@
     <title>Equipment Request Logger</title>
     <%= favicon_link_tag "binoculars.ico" %>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
   </head>
 
   <body>
@@ -15,5 +13,6 @@
     <%= render 'shared/header' %>
       <%= yield %>
     <%= render 'shared/footer' %>
+    <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
   </body>
 </html>
