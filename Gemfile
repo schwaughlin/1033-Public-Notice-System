@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
 gem 'devise'
-
+gem 'jquery-datatables-rails', '~> 3.4.0'
 #primary icons source
 gem "font-awesome-rails"
 
