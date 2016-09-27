@@ -40,12 +40,12 @@
             <%= piece.records_shown %>
           </td>
           <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 %>
-            <td class="success">
-              <%= link_to "Unsubscribe from Notifications", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)) %>
+            <td>
+              <%= link_to "Unsubscribe", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)), class: "btn btn-md btn-danger"  %>
             </td>
           <% else %>
             <td>
-              <%= link_to "Request Notifications", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)) %>
+              <%= link_to "Subscribe", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)), class: "btn btn-md btn-success" %>
             </td>
           <% end %>
         </tr>
