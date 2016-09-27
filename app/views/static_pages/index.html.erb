@@ -1,10 +1,43 @@
 
-
-<table class="table-striped">
-  <thead>
-
-  </thead>
-  <tbody>
-
-  </tbody>
-</table>
+<div class="container">
+  <table class="table-striped">
+    <thead>
+      <th>
+        Department
+      </th>
+      <th>
+        Equipment Type
+      </th>
+      <th>
+        Cost
+      </th>
+      <th>
+        Date Acquired
+      </th>
+      <th>
+        Records Validated By Department?
+      </th>
+    </thead>
+    <tbody>
+      <% @equipment.each do |piece| %>
+        <tr>
+          <td>
+            <%= piece.department.titlecase %>
+          </td>
+          <td>
+            <%= piece.name.titlecase %>
+          </td>
+          <td>
+            <%= piece.cost %>
+          </td>
+          <td>
+            <%= piece.date_acquired %>
+          </td>
+          <td>
+            <%= piece.records_shown %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
