@@ -33,6 +33,7 @@ gem 'jquery-datatables-rails', '~> 3.4.0'
 #primary icons source
 gem "font-awesome-rails"
 gem 'pry-byebug'
+gem 'delayed_job_active_record'
 
 
 #For .scss lint yml file
