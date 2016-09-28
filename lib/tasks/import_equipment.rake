@@ -1,6 +1,7 @@
 namespace :import_equipment do
   desc 'Imports equipment data'
   task first_import: :environment do
+    require 'csv'
     spreadsheet = CSV.read('eqpt.csv')
 
     spreadsheet.each do |row|
