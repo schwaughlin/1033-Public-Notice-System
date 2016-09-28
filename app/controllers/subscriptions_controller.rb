@@ -12,12 +12,13 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-  def show
-    binding.pry
-  end
-
   def destroy
-    binding.pry
+    if Subscription.where("equipment_id = ?", params[:id]).where("user_id = ?", current_user.id).destroy_all
+      flash[:notice] = "You have successfully unsubscribed from that item."
+    else
+      flash[:alert] = "There has been a problem unsubscribing. Please try again later."
+    end
+    redirect_to root_path
   end
 
   private
