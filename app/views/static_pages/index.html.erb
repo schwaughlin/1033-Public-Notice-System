@@ -41,7 +41,7 @@
           </td>
           <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 %>
             <td>
-              <%= link_to "Unsubscribe", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)), class: "btn btn-md btn-danger"  %>
+              <%= link_to "Unsubscribe", subscription_path(piece), method: :delete, class: "btn btn-md btn-danger"  %>
             </td>
           <% else %>
             <td>

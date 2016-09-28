@@ -12,6 +12,14 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def show
+    binding.pry
+  end
+
+  def destroy
+    binding.pry
+  end
+
   private
 
   def whitelisted_params
