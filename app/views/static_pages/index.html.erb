@@ -15,6 +15,9 @@
         Date Acquired
       </th>
       <th>
+        Public Notice Required?
+      </th>
+      <th>
         Records Validated By Department?
       </th>
       <th>
@@ -36,6 +39,12 @@
           <td>
             <%= piece.date_acquired %>
           </td>
+          <% if piece.require_public_notice? %>
+              <!-- following law enforcement portal, this will be further expanded -->
+              <td class="danger"><strong>YES - NONE REPORTED</strong>
+          <% else %>
+              <td class="success"><strong>NO</strong></td>
+          <% end %>
           <td>
             <%= piece.records_shown %>
           </td>
