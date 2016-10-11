@@ -1,0 +1,3 @@
+<% if current_user.approved.blank? %>
+  <div class="alert alert-info"> You are currently using the law enforcement portal as an unapproved user. None of this data will be published until you are approved. <strong> <a href="mailto:nicholas.schwaderer@gmail.com">Email the webmaster to request approval</a>.</strong> </div>
+<% end %>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">1033 Equipment Logger System</a>
+      <a class="navbar-brand" href="#">1033 Equipment Logger System <strong>(ELS-1033)</strong></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -14,7 +14,7 @@
         <% if user_signed_in? %>
             <p class="navbar-text"><%= current_user.email %></p>
           <li>
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
           </li>
         <% else %>
           <li>
@@ -25,7 +25,7 @@
           </li>
         <% end %>
         <li>
-          <%= link_to "Source Code", "https://www.github.com/schwaughlin/1033-Public-Notice-System" %>
+          <%= link_to "Law Enforcement Home Page", leos_path %>
         </li>
       </ul>
     </div>
