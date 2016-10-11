@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
     @equipment = Equipment.all
   end
 
+  def law_enforcement_landing
+
+  end
+
 end

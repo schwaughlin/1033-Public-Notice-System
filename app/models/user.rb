@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :subscriptions
 
-  scope -> :law_enforcement, ->{ where(law_enforcement: true) }
-
+  def self.law_enforcement
+    where(law_enforcement: true)
+  end
 end
