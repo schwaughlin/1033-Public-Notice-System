@@ -1,3 +1,32 @@
 <% if current_user.approved.blank? %>
   <div class="alert alert-info"> You are currently using the law enforcement portal as an unapproved user. None of this data will be published until you are approved. <strong> <a href="mailto:nicholas.schwaderer@gmail.com">Email the webmaster to request approval</a>.</strong> </div>
 <% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tab-container tab-orange">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a data-toggle="tab", href="#public-notice-form"></a>
+          </li>
+          <li>
+            <a data-toggle="tab", href="#another-tab"></a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="public-notice-form">
+            <h2>THIS IS A PUBLIC NOTICE FORM</h2>
+          </div>
+          <div class="tab-pane" id="another-tab">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
