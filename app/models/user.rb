@@ -4,4 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :subscriptions
+
+  scope -> :law_enforcement, ->{ where(law_enforcement: true) }
 end
