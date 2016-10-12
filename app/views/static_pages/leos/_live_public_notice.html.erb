@@ -1,0 +1,62 @@
+<table class="table table-striped">
+  <thead>
+    <th>
+      Department
+    </th>
+    <th>
+      Equipment Type
+    </th>
+    <th>
+      Cost
+    </th>
+    <th>
+      Date Requested
+    </th>
+    <th>
+      Date Notice Posted
+    </th>
+    <th>
+      Public Notice Required?
+    </th>
+    <th>
+      Records Validated By Department?
+    </th>
+    <th>
+      Equipment Received?
+    </th>
+  </thead>
+  <tbody>
+    <% @equipment_notice.each do |piece| %>
+      <tr>
+        <td>
+          <%= piece.department.titlecase %>
+        </td>
+        <td>
+          <%= piece.name.titlecase %>
+        </td>
+        <td>
+          <%= piece.cost %>
+        </td>
+        <td>
+          <%= piece.date_requested %>
+        </td>
+        <td>
+          <%= piece.created_at %>
+        </td>
+        <% if piece.require_public_notice? %>
+            <!-- following law enforcement portal, this will be further expanded -->
+            <td><span class="label label-danger">YES - NONE REPORTED</span></td>
+        <% else %>
+            <td><span class="label label-success">NO</span></td>
+        <% end %>
+        <td>
+          <%= piece.records_shown %>
+        </td>
+        <td>
+          <!-- TODO: dropdown modal confirming equipment received and controller to update it. -->
+          <%= link_to "Equipment Received", "#", class: "btn btn-success" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

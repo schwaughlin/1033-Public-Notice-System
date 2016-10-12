@@ -1,64 +1,48 @@
-
 <div class="container">
-  <table class="table table-striped">
-    <thead>
-      <th>
-        Department
-      </th>
-      <th>
-        Equipment Type
-      </th>
-      <th>
-        Cost
-      </th>
-      <th>
-        Date Acquired
-      </th>
-      <th>
-        Public Notice Required?
-      </th>
-      <th>
-        Records Validated By Department?
-      </th>
-      <th>
-        Subscribe?
-      </th>
-    </thead>
-    <tbody>
-      <% @equipment.each do |piece| %>
-        <tr>
-          <td>
-            <%= piece.department.titlecase %>
-          </td>
-          <td>
-            <%= piece.name.titlecase %>
-          </td>
-          <td>
-            <%= piece.cost %>
-          </td>
-          <td>
-            <%= piece.date_acquired %>
-          </td>
-          <% if piece.require_public_notice? %>
-              <!-- following law enforcement portal, this will be further expanded -->
-              <td><span class="label label-danger">YES - NONE REPORTED</span></td>
-          <% else %>
-              <td><span class="label label-success">NO</span></td>
-          <% end %>
-          <td>
-            <%= piece.records_shown %>
-          </td>
-          <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 && current_user %>
-            <td>
-              <%= link_to "Unsubscribe", subscription_path(piece), method: :delete, class: "btn btn-md btn-danger"  %>
-            </td>
-          <% else %>
-            <td>
-              <%= link_to "Subscribe", new_subscription_path(:equipment_id => piece.id, :user_id => current_user.try(:id)), class: "btn btn-md btn-success" %>
-            </td>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h2><strong>Public Information Portal</strong></h2>
+        </div>
+      </div>
+      <div class="tab-container tab-orange">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a data-toggle="tab", href="#all-military-equipment">All Military Equipment</a>
+          </li>
+          <li>
+            <a data-toggle="tab", href="#posted-public-notices">Posted Public Notices</a>
+          </li>
+
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="posted-public-notices">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- heading -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <%= render "static_pages/public/public_notices" %>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane active" id="all-military-equipment">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- heading -->
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <%= render "static_pages/public/existing_equipment" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

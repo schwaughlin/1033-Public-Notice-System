@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def index
     @equipment = Equipment.made_by_valid_users
+    @equipment_notice = Equipment.where("date_acquired IS NULL").made_by_valid_users#.where("date_acquired IS NULL")
   end
 
   def law_enforcement_index
@@ -12,6 +13,8 @@ class StaticPagesController < ApplicationController
       flash[:alert] = "You are not a law enforcement user and therefore not allowed to access this page."
       redirect_to root_path
     end
+    @equipment = Equipment.where("department = ?", current_user.department).where("date_acquired IS NOT NULL")
+    @equipment_notice = Equipment.where("department = ?", current_user.department).where("date_acquired IS NULL")
   end
 
 end
