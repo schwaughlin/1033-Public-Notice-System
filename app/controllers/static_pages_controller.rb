@@ -2,6 +2,7 @@ class StaticPagesController < ApplicationController
 
   def index
     @equipment = Equipment.made_by_valid_users
+    @equipment_notice = Equipment.where("date_acquired IS NULL").made_by_valid_users#.where("date_acquired IS NULL")
   end
 
   def law_enforcement_index
