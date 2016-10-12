@@ -1,3 +1,43 @@
 <% if current_user.approved.blank? %>
   <div class="alert alert-info"> You are currently using the law enforcement portal as an unapproved user. None of this data will be published until you are approved. <strong> <a href="mailto:nicholas.schwaderer@gmail.com">Email the webmaster to request approval</a>.</strong> </div>
 <% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h2><strong><%= current_user.department %> </strong>1033 Reporting Page </h2>
+        </div>
+      </div>
+      <div class="tab-container tab-orange">
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a data-toggle="tab", href="#public-notice-form">Public Notice</a>
+          </li>
+          <li>
+            <a data-toggle="tab", href="#another-tab">Another Tab</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="public-notice-form">
+            <div class="row">
+              <div class="col-md-12">
+                <!-- heading -->
+              </div>
+
+            </div>
+            <%= render "static_pages/leos/equipment_form" %>
+          </div>
+          <div class="tab-pane" id="another-tab">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

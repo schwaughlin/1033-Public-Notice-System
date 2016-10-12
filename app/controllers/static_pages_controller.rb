@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 
   def index
-    @equipment = Equipment.all
+    @equipment = Equipment.made_by_valid_users
   end
 
   def law_enforcement_index

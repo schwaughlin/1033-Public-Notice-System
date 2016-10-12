@@ -1,5 +1,7 @@
 class Equipment < ApplicationRecord
   has_many :subscriptions
+  has_many :notes
+  accepts_nested_attributes_for :notes
 
   def require_public_notice?
     if date_acquired
@@ -7,5 +9,17 @@ class Equipment < ApplicationRecord
     else
       false
     end
+  end
+
+  def self.made_by_valid_users
+    made_by_no_users + made_by_valid_law_enforcement
+  end
+
+  def self.made_by_no_users
+    where("creator_id IS NULL")
+  end
+
+  def self.made_by_valid_law_enforcement
+    where(creator_id: User.where("approved = ?", true).pluck(:id))
   end
 end

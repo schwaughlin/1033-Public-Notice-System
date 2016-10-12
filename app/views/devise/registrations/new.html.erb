@@ -5,6 +5,8 @@
     <%= f.email_field :email, :autofocus => true, :placeholder => 'Email address' %>
     <%= f.password_field :password, :placeholder => 'Password' %>
     <%= f.password_field :password_confirmation, :placeholder => 'Password confirmation' %>
+    <%= f.label "Department (if a law enforcement user)" %>
+    <%= f.text_field :department %>
     <%= f.label "Use as Law enforcement?" %>
     <%= f.check_box :law_enforcement %>
     <%= f.submit "Sign up",:class=>'btn btn-primary' %>
