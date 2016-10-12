@@ -15,6 +15,7 @@ class EquipmentController < ApplicationController
   private
 
   def permitted_params
-    params.fetch(:equipment, {}).permit(:name, :cost, :value, :quantity, :code, :date_requested, :department, :creator_id)
+    params.fetch(:equipment, {}).permit(:name, :cost, :value, :quantity, :code, :date_requested, :department, :creator_id,
+                                        notes_attributes: [:id, :user_id, :equipment_id, :text])
   end
 end

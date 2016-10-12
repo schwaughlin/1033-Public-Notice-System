@@ -1,4 +1,4 @@
-<%= form_for Equipment.new, :remote => true, url: {:controller => :equipment, action: :create}, html: {class: "product-form"} do |f| %>
+<%= form_for Equipment.new, url: {:controller => :equipment, action: :create}, html: {class: "product-form"} do |f| %>
   <div class="row">
     <div class="col-xs-4">
       <div class="form-group">
@@ -19,6 +19,17 @@
           <%= f.text_field :value, class: "form-control text" %>
         </div>
       </div>
+      <!-- TODO: nested notes -->
+      <%= f.fields_for :notes, Note.new do |ff| %>
+        <%= ff.hidden_field :user_id, value: current_user.id %>
+        <div class="form-group">
+          Notes
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-sticky-note-o"></i></span>
+            <%= ff.text_area :text, placeholder: "Include detailed notes here", class: 'form-control'%>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="col-xs-4">
       <div class="form-group">
@@ -32,7 +43,7 @@
         Code(s)
         <%= f.text_field :code, class: "form-control" %>
       </div>
-      <div class="form-group datetime-local">
+      <div class="form-group">
         <!-- TODO: datepicker -->
         Date Requested
         <div class="input-group">
@@ -42,7 +53,7 @@
       </div>
       <%= f.hidden_field :department, value: current_user.department %>
       <%= f.hidden_field :creator_id, value: current_user.id %>
-      <!-- TODO: nested notes -->
+
       <!-- TODO: attached docs -->
       <div class="form-group">
         <%= f.submit "Post New Public Notice", class: "btn btn-lg btn-success pull-right" %>

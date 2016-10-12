@@ -1,6 +1,7 @@
 class Equipment < ApplicationRecord
   has_many :subscriptions
   has_many :notes
+  accepts_nested_attributes_for :notes
 
   def require_public_notice?
     if date_acquired
