@@ -37,7 +37,7 @@
         Date Requested
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-          <%= f.text_field :date_requested, class: "form-control datetime-local" %>
+          <%= f.text_field :date_requested, class: "form-control datepicker" %>
         </div>
       </div>
       <%= f.hidden_field :department, value: current_user.department %>

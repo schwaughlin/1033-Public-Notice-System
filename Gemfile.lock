@@ -46,6 +46,8 @@ GEM
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
+    bootstrap-datepicker-rails (1.6.4.1)
+      railties (>= 3.0)
     brakeman (3.3.5)
     builder (3.2.2)
     bullet (5.2.1)
@@ -367,6 +369,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  bootstrap-datepicker-rails
   brakeman
   bullet
   byebug
