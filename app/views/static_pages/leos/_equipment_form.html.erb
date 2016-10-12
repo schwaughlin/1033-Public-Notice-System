@@ -7,17 +7,26 @@
       </div>
       <div class="form-group">
         Total Cost to Department
-        <%= f.text_field :cost, class: "form-control text" %>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :cost, class: "form-control text" %>
+        </div>
       </div>
       <div class="form-group">
         Total Value of Equipment
-        <%= f.text_field :value, class: "form-control text" %>
+        <div class="input-group">
+          <span class="input-group-addon">$</span>
+          <%= f.text_field :value, class: "form-control text" %>
+        </div>
       </div>
     </div>
     <div class="col-xs-4">
       <div class="form-group">
         Quantity
-        <%= f.text_field :quantity, class: "form-control number" %>
+        <div class="input-group">
+          <span class="input-group-addon">#</span>
+          <%= f.text_field :quantity, class: "form-control number" %>
+        </div>
       </div>
       <div class="form-group">
         Code(s)
@@ -26,14 +35,17 @@
       <div class="form-group datetime-local">
         <!-- TODO: datepicker -->
         Date Requested
-        <%= f.text_field :date_requested, class: "form-control datetime-local" %>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+          <%= f.text_field :date_requested, class: "form-control datetime-local" %>
+        </div>
       </div>
       <%= f.hidden_field :department, value: current_user.department %>
       <%= f.hidden_field :creator_id, value: current_user.id %>
       <!-- TODO: nested notes -->
       <!-- TODO: attached docs -->
       <div class="form-group">
-        <%= f.submit "Create", class: "btn btn-primary" %>
+        <%= f.submit "Post New Public Notice", class: "btn btn-lg btn-success pull-right" %>
       </div>
     </div>
   </div>

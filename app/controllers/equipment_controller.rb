@@ -4,6 +4,7 @@ class EquipmentController < ApplicationController
     @equipment = Equipment.new permitted_params
     if @equipment.save
       flash[:notice] = "New public notice for #{@equipment.name} successfully posted!"
+      @equipment = nil
       redirect_to leos_path
     else
       flash[:alert] = "There was a problem saving this equipment. Please try again later."
