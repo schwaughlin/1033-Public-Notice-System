@@ -41,9 +41,9 @@
           </td>
           <% if piece.require_public_notice? %>
               <!-- following law enforcement portal, this will be further expanded -->
-              <td class="danger"><strong>YES - NONE REPORTED</strong>
+              <td><span class="label label-danger">YES - NONE REPORTED</span></td>
           <% else %>
-              <td class="success"><strong>NO</strong></td>
+              <td><span class="label label-success">NO</span></td>
           <% end %>
           <td>
             <%= piece.records_shown %>
