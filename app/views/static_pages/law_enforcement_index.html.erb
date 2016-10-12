@@ -10,34 +10,57 @@
           <h2><strong><%= current_user.department %> </strong>1033 Reporting Page </h2>
         </div>
       </div>
+      <hr>
       <div class="tab-container tab-orange">
         <ul class="nav nav-tabs">
           <li class="active">
-            <a data-toggle="tab", href="#public-notice-form">Public Notice</a>
+            <a data-toggle="tab", href="#department-equipment">Department Equipment</a>
           </li>
           <li>
-            <a data-toggle="tab", href="#another-tab">Another Tab</a>
+            <a data-toggle="tab", href="#live-public-notices">Live Public Notices</a>
           </li>
+          <li>
+            <a data-toggle="tab", href="#public-notice-form">Publish Public Notice</a>
+          </li>
+          <li>
+            <a data-toggle="tab", href="#about">About</a>
+          </li>
+
         </ul>
         <div class="tab-content">
-          <div class="tab-pane active" id="public-notice-form">
+          <div class="tab-pane active" id="department-equipment">
+            <div class="row">
+              <div class="col-md-12">
+                <%= render "static_pages/leos/department_equipment" %>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="live-public-notices">
+            <div class="row">
+              <div class="col-md-12">
+                <%= render "static_pages/leos/live_public_notice" %>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="public-notice-form">
+            <div class="row">
+              <div class="col-md-12">
+                <%= render "static_pages/leos/equipment_form" %>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="about">
             <div class="row">
               <div class="col-md-12">
                 <!-- heading -->
               </div>
-
             </div>
-            <%= render "static_pages/leos/equipment_form" %>
+            <!-- TODO: About -->
+            <h4>About</h4>
+            <!--  -->
           </div>
-          <div class="tab-pane" id="another-tab">
-
-          </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
 </div>

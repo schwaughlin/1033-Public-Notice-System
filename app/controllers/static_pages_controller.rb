@@ -13,6 +13,8 @@ class StaticPagesController < ApplicationController
       flash[:alert] = "You are not a law enforcement user and therefore not allowed to access this page."
       redirect_to root_path
     end
+    @equipment = Equipment.where("department = ?", current_user.department).where("date_acquired IS NOT NULL")
+    @equipment_notice = Equipment.where("department = ?", current_user.department).where("date_acquired IS NULL")
   end
 
 end
