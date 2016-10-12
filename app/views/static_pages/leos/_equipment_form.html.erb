@@ -1,0 +1,38 @@
+<%= form_for Equipment.new, :remote => true, url: {:controller => :equipment, action: :create}, html: {class: "product-form"} do |f| %>
+  <div class="row">
+    <div class="col-xs-4">
+      <div class="form-group">
+        Equipment Name
+        <%= f.text_field :name, class: "form-control text" %>
+      </div>
+      <div class="form-group">
+        Total Cost to Department
+        <%= f.text_field :cost, class: "form-control text" %>
+      </div>
+      <div class="form-group">
+        Total Value of Equipment
+        <%= f.text_field :value, class: "form-control text" %>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group">
+        Quantity
+        <%= f.text_field :quantity, class: "form-control number" %>
+      </div>
+      <div class="form-group">
+        Code(s)
+        <%= f.text_field :code, class: "form-control" %>
+      </div>
+      <div class="form-group datetime-local">
+        <!-- TODO: datepicker -->
+        Date Requested
+        <%= f.text_field :date_requested, class: "form-control datetime-local" %>
+      </div>
+      <!-- TODO: nested notes -->
+      <!-- TODO: attached docs -->
+      <div class="form-group">
+        <%= f.submit "Create", class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

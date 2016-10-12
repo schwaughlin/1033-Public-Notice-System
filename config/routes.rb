@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: "static_pages#index"
   get '/leos' => "static_pages#law_enforcement_index"
   resources :subscriptions
+  resources :equipment
   devise_for :users, :controllers => { :registrations => "registrations" }
 end
