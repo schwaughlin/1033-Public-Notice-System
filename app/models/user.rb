@@ -5,8 +5,17 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :subscriptions
+  validates_presence_of :department, :if => lambda {|u| law_enforcement == true} 
 
   def self.law_enforcement
     where(law_enforcement: true)
+  end
+
+  def law_enforcement_must_have_department
+    if law_enforcement == true && department.blank?
+      return false
+    else
+      return true
+    end
   end
 end
