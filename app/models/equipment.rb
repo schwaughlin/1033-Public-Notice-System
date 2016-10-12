@@ -8,4 +8,16 @@ class Equipment < ApplicationRecord
       false
     end
   end
+
+  def self.made_by_valid_users
+    made_by_no_users + made_by_valid_law_enforcement
+  end
+
+  def self.made_by_no_users
+    where("creator_id IS NULL")
+  end
+
+  def self.made_by_valid_law_enforcement
+    where(creator_id: User.where("approved = ?", true).pluck(:id))
+  end
 end
