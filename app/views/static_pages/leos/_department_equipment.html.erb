@@ -19,6 +19,9 @@
       Records Validated By Department?
     </th>
     <th>
+      Related Documentation
+    </th>
+    <th>
       Subscribe?
     </th>
   </thead>
@@ -49,6 +52,9 @@
         <% end %>
         <td>
           <span class="label label-warning"><%= piece.records_shown %></span>
+        </td>
+        <td>
+          <%= link_to "Attachments", piece.attachment_url %>
         </td>
         <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 && current_user %>
           <td>

@@ -22,6 +22,9 @@
       Records Validated By Department?
     </th>
     <th>
+      Attachments
+    </th>
+    <th>
       Equipment Received?
     </th>
   </thead>
@@ -54,6 +57,9 @@
         <% end %>
         <td>
           <span class="label label-warning"><%= piece.records_shown %></span>
+        </td>
+        <td>
+          <%= link_to "Attachments", piece.attachment_url %>
         </td>
         <td>
           <!-- TODO: dropdown modal confirming equipment received and controller to update it. -->

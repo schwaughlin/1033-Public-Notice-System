@@ -1,5 +1,6 @@
 class Equipment < ApplicationRecord
 
+  mount_uploader :attachment, AttachmentUploader
   validates :name, presence: true
   validates :quantity, presence: true
   validates_date :date_requested #, timeliness: { on_or_after: lambda { Date.today - 14 }, type: :date }, :message => "requires public notice within 14 days of request"

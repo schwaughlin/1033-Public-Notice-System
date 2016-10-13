@@ -32,7 +32,7 @@ class EquipmentController < ApplicationController
   private
 
   def permitted_params
-    params.fetch(:equipment, {}).permit(:name, :cost, :value, :quantity, :code, :date_requested, :department, :creator_id,
-                                        notes_attributes: [:id, :user_id, :equipment_id, :text])
+    params.fetch(:equipment, {}).permit(:name, :attachment, :cost, :value, :quantity, :code, :date_requested, :department, :creator_id,
+                                        notes_attributes: [:id, :attachment, :user_id, :equipment_id, :text])
   end
 end
