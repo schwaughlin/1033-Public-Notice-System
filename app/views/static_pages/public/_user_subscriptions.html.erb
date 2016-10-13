@@ -26,7 +26,7 @@
     </th>
   </thead>
   <tbody>
-    <% @equipment_notice.each do |piece| %>
+    <% @equipment_subscriptions.each do |piece| %>
       <tr>
         <td>
           <%= piece.department.titlecase %>
@@ -69,10 +69,3 @@
     <% end %>
   </tbody>
 </table>
-<% if current_user %>
-  <% if current_user.subscribed %>
-    <%= link_to "Unsubscribe from Public Notices", unsubscribe_public_notices_path, class: "btn btn-lg btn-danger" %>
-  <% else %>
-  <%= link_to "Subscribe to Public Notices", subscribe_public_notices_path, class: "btn btn-lg btn-success" %>
-  <% end %>
-<% end %>

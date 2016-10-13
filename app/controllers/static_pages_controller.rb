@@ -3,6 +3,25 @@ class StaticPagesController < ApplicationController
   def index
     @equipment = Equipment.made_by_valid_users
     @equipment_notice = Equipment.where("date_acquired IS NULL").made_by_valid_users#.where("date_acquired IS NULL")
+    if current_user
+      @equipment_subscriptions = Equipment.find(Subscription.where("user_id = ?", current_user.id).pluck(:equipment_id))
+    end
+  end
+
+  def subscribe_public_notices
+    @user = current_user
+    @user.subscribed = true
+    @user.save
+    flash[:notice] = "Congratulations! You have subscribed to receive email notifications on new public notices."
+    redirect_to root_path
+  end
+
+  def unsubscribe_public_notices
+    @user = current_user
+    @user.subscribed = false
+    @user.save
+    flash[:notice] = "You have successfully unsubscribed from public notices."
+    redirect_to root_path
   end
 
   def law_enforcement_index
