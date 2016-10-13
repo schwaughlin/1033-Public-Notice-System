@@ -45,12 +45,16 @@
         </td>
         <% if piece.require_public_notice? %>
             <!-- following law enforcement portal, this will be further expanded -->
-            <td><span class="label label-danger">YES - NONE REPORTED</span></td>
+            <% if piece.records_shown %>
+              <td><span class="label label-info">YES - AND PROVIDED</span></td>
+            <% else %>
+              <td><span class="label label-danger">YES - NONE REPORTED</span></td>
+            <% end %>
         <% else %>
             <td><span class="label label-success">NO</span></td>
         <% end %>
         <td>
-          <%= piece.records_shown %>
+          <span class="label label-warning"><%= piece.records_shown %></span>
         </td>
         <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 && current_user %>
           <td>
