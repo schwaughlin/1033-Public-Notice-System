@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+
+  after_create :send_welcome_email
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   WHITELISTED_DEPARTMENTS = %w(@greatfallsmt.net tcsheriff6@3rivers.net tcsheriff1@3rivers.net @sheriff.meagherco.org)
@@ -18,5 +20,9 @@ class User < ApplicationRecord
     else
       return true
     end
+  end
+
+  def send_welcome_email
+    UserMailer.send_welcome_email(self).deliver
   end
 end

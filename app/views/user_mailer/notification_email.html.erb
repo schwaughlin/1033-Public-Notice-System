@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>There have been new posts on the 1033 Equipment Logger!</h1>
+    <p>You have elected to receive this email whenever there are changes to public notice or equipment logging status on the 1033 logger website. To unsubscribe, please visit our website.</p>
+    <table>
+      <thead>
+        <th>
+          Equipment Name
+        </th>
+        <th>
+          Department
+        </th>
+        <th>
+          Created
+        </th>
+        <th>
+          Last Updated
+        </th>
+      </thead>
+      <tbody>
+        <% @equipment.each do |piece| %>
+          <tr>
+            <td>
+              <%= piece.name %>
+            </td>
+            <td>
+              <%= piece.department %>
+            </td>
+            <td>
+              <%= piece.created_at.to_date %>
+            </td>
+            <td>
+              <%= piece.updated_at.to_date %>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <p>If you have any questions you can reply to this email.</p>
+  </body>
+</html>
