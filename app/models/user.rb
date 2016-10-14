@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   WHITELISTED_DEPARTMENTS = %w(@greatfallsmt.net tcsheriff6@3rivers.net tcsheriff1@3rivers.net @sheriff.meagherco.org)
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+         :recoverable, :rememberable, :trackable, :validatable#, :confirmable
   has_many :subscriptions
   has_many :notes
   validates_presence_of :department, :if => lambda {|u| law_enforcement == true}
@@ -23,6 +23,6 @@ class User < ApplicationRecord
   end
 
   def send_welcome_email
-    UserMailer.send_welcome_email(self).deliver
+    UserMailer.welcome_email(self).deliver
   end
 end

@@ -1,4 +1,4 @@
-<table class="table table-striped">
+<table id="myTable" class="table  table-striped">
   <thead>
     <th>
       Department
@@ -60,7 +60,7 @@
           <span class="label label-warning"><%= piece.records_shown %></span>
         </td>
         <td>
-          <%= link_to "Attachments", piece.attachment_url %>
+          <%= link_to "Attachments", piece.attachment_url unless piece.attachment.blank? %>
         </td>
         <% if Subscription.where("equipment_id = ?", piece.id).where("user_id = ?", current_user.try(:id)).count > 0 && current_user %>
           <td>

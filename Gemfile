@@ -32,7 +32,7 @@ gem 'validates_timeliness', '~> 4.0'
 gem 'carrierwave'
 gem 'faker'
 gem 'devise'
-gem 'jquery-datatables-rails', '~> 3.4.0'
+# gem 'jquery-datatables-rails', '~> 3.4.0'
 #primary icons source
 gem "font-awesome-rails"
 gem 'pry-byebug'

@@ -11,9 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
- *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
- *= require bootstrap-datepicker3
- *= require dataTables/jquery.dataTables
  *= require font-awesome
  *= require_self
  */
