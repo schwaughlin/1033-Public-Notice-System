@@ -1,5 +1,5 @@
 class Equipment < ApplicationRecord
-
+  audited
   mount_uploader :attachment, AttachmentUploader
   validates :name, presence: true
   validates :quantity, presence: true

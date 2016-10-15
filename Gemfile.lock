@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/rails/rails-observers.git
+  revision: 3fe157d6cbb5b5e767ded248009fc59443d63fa1
+  specs:
+    rails-observers (0.1.3.alpha)
+      activemodel (>= 4.0, < 5.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,6 +48,9 @@ GEM
     addressable (2.4.0)
     arel (7.1.1)
     ast (2.3.0)
+    audited (4.3.0)
+      activerecord (>= 4.0, < 5.1)
+      rails-observers (~> 0.1.2)
     bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
@@ -371,6 +381,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  audited (~> 4.3)
   better_errors
   bootstrap-datepicker-rails
   brakeman
@@ -404,6 +415,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-controller-testing
+  rails-observers!
   rails-pry
   rspec-rails (~> 3.5)
   rspec-retry
